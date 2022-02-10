@@ -1,0 +1,5 @@
+/.idea/
+/venv/
+/db.sqlite3
+/postgreSQL.sql
+/lost_and_found/mydatabase

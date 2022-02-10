@@ -1,0 +1,13 @@
+{% extends 'shared/base.html' %}
+
+{% block all_styles %}
+<h1>This is the page for creating pets</h1>
+<h2>Fill out the form to create new pet:</h2>
+<form method="post" action="{% url 'create pet' %}">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary mt-2" type="submit">Create</button>
+</form>
+<p>Click <a href="{% url 'landing page' %}">here</a> to go to the landing page</p>
+
+{% endblock %}

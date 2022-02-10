@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phones list</title>
+</head>
+<body>
+<ul>
+{% for phone in phones %}
+    {% if phone.quantity %}
+        <li>{{ phone.name }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'shared/base.html' %}
+
+{% block all_styles %}
+<h1>Edit pet:</h1>
+<form method="post" action="{% url 'create pet' %}">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary mt-2" type="submit">Edit</button>
+</form>
+{% endblock %}

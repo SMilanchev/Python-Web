@@ -1,0 +1,14 @@
+{% extends 'shared/base_sidebar.html' %}
+{% load todos %}
+
+{% block sidebar %}
+    {% todos_preview %}
+{% endblock %}
+
+{% block main_content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button>Create</button>
+    </form>
+{% endblock %}
